@@ -9,7 +9,8 @@ def pesquisar(update: Update, context):
         update.inline_query.answer(switch_pm_text="Digite o ID ou username do canal, o filme ou série.", results=dados, switch_pm_parameter="vaziotexto")
         return
     else:
-        for dados_pesquisados in USERBOT.search_messages(texto[0], query=texto[1], limit=30):
+        canal = texto[0]
+        for dados_pesquisados in USERBOT.search_messages(f"{canal}", query=texto[1], limit=30):
             if(f"{dados_pesquisados.document}" == "None"):
                 pass
             else:
