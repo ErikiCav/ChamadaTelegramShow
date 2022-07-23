@@ -2,7 +2,7 @@
 
 Telegram UserBot para exibir vídeos e tocar músicas em chamadas de grupos no telegram utilizando pytgcalls.
 
-#Este bot é capaz de reproduzir vídeos do Youtube e Lives.
+## Este bot é capaz de reproduzir vídeos do Youtube e Lives.
 
 ### Requisitos de conta.
 - Uma conta do Telegram para usar como bot de música, você não pode usar contas de bot regulares, pois elas não podem participar de bate-papos de voz. Deve ser uma conta de usuário.
@@ -32,10 +32,6 @@ Comando | Descrição
 /listas | Exibe as mídias na fila de reprodução.
 /play | Começa a tocar as mídias na fila de reprodução.
 /stop | Para a transmissão do bot.
-
-## Note
-
-1. If you want any help you can ask [here](https://t.me/tgvcsupport)
 
 ## Créditos.
 
