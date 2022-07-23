@@ -74,8 +74,8 @@ def get_listas(grupo_id):
 def get_usada(grupo_id):
     db = conectar()
     dados = db.execute(f"""SELECT * FROM LISTAS_USADAS WHERE GRUPO_ID='{grupo_id}'""").fetchall()[0]
-    grupo_id = dados[2]
-    db.executescript(f"""DELETE FROM LISTAS_USADAS WHERE GRUPO_ID='{grupo_id}'""")
+    id = dados[0]
+    db.executescript(f"""DELETE FROM LISTAS_USADAS WHERE ID='{id}'""")
     db.commit()
     db.close()
     return dados
