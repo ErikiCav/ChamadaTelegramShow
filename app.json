@@ -3,6 +3,7 @@
   "description": "DEV @Codipyt",
   "logo": "https://telegra.ph/file/4c2cf189e30b5b61be8a8.jpg",
   "repository": "https://github.com/ErikiCav/ChamadaTelegramShow/",
+  "stack": "container",
   "env": {
     "TOKEN_BOT": {
       "description": "No espaço abaixo, digite o token de seu bot gerado pelo @BotFather!",
