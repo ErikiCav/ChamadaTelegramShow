@@ -1,11 +1,12 @@
 from pytgcalls import StreamType
-import tgcalls, time
+import time
+from tgcalls import pytgcalls
 from pytgcalls.types.input_stream import AudioVideoPiped, AudioPiped
 from Database import get_lista, get_modo
 
 def sair(grupo_id):
     try:
-        tgcalls.pytgcalls.leave_group_call(grupo_id)
+        pytgcalls.leave_group_call(grupo_id)
     except:
         pass
 
@@ -16,9 +17,10 @@ def entrar_video(grupo_id):
     local = dados[3]
 
     try:
-        tgcalls.pytgcalls.join_group_call(grupo_id, AudioVideoPiped(local), stream_type=StreamType().pulse_stream, )
+        pytgcalls.join_group_call(grupo_id, AudioVideoPiped(local), stream_type=StreamType().pulse_stream, )
     except:
-        tgcalls.pytgcalls.join_group_call(grupo_id, AudioPiped(local), stream_type=StreamType().pulse_stream, )
+        pytgcalls.join_group_call(grupo_id, AudioPiped(local), stream_type=StreamType().pulse_stream, )
+    
     return titulo, link
 
 def entrar_audio(grupo_id):
@@ -27,7 +29,7 @@ def entrar_audio(grupo_id):
     link = dados[2]
     local = dados[3]
 
-    tgcalls.pytgcalls.join_group_call(grupo_id, AudioPiped(local), stream_type=StreamType().pulse_stream, )
+    pytgcalls.join_group_call(grupo_id, AudioPiped(local), stream_type=StreamType().pulse_stream, )
     return titulo, link
 
 def tocar(grupo_id, mensagem):
@@ -38,7 +40,7 @@ def tocar(grupo_id, mensagem):
         titulo = dados[0]
         link = dados[1]
     else:
-        entrar_audio(grupo_id)
+        dados = entrar_audio(grupo_id)
         titulo = dados[0]
         link = dados[1]
     mensagem.edit_text(f"""<b>Mídia tocando:</b> <a href="{link}">{titulo}</a>.\n\n<b>Use /listas para listar as listas de reprodução!</b>""","html")
