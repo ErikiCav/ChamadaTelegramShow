@@ -11,5 +11,5 @@ RUN apt-get install -y nodejs
 RUN mkdir /app/
 WORKDIR /app/
 COPY . /app/
-RUN pip3 install -U -r requirements.txt
+RUN pip3 install -U -r requirements.txt -U
 CMD ["python3","setup.py"]
