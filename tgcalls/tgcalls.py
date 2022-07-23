@@ -11,7 +11,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioVideoPiped, AudioPiped
 import telegram
 
-client = Client(config.SESSION_STRING, config.API_ID, config.API_HASH)
+client = Client(":memory", config.API_ID, config.API_HASH, session_string=config.SESSION_STRING)
 
 bot = telegram.Bot(config.TOKEN_BOT)
 
