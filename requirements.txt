@@ -1,0 +1,5 @@
+requests
+TgCrypto
+python-dotenv
+pytube -U
+py-tgcalls -U
