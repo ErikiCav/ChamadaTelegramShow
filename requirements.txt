@@ -3,3 +3,5 @@ TgCrypto
 python-dotenv
 pytube
 py-tgcalls
+python-telegram-bot
+sqlite3
