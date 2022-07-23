@@ -21,7 +21,7 @@
       "required": true
     },
      "SESSION_STRING": {
-      "description": "WAIT",
+      "description": "Execute o script gerar_session_name.py e insira a string gerada abaixo!",
       "required": true
     }
   }
