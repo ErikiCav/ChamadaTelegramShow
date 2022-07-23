@@ -7,7 +7,7 @@ def adicionar(update: Update, context):
     grupo_id = update.message.chat.id
     post_grupo(grupo_id)
     user_id = update.message.from_user.id
-    vazio = not "youtu.be" in update.message.text.lower()
+    vazio = not "youtu" in update.message.text.lower()
     if not(f"{update.message.chat.type}" == "private"):
         if(permitido(CheckAdmin(update), user_id)):
             if(banido(grupo_id)):
